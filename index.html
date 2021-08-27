@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500&family=Roboto+Slab:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="outer-box-frame">
+       <form class="row" id="enter-your-city">
+          <div class="row">
+            <div class="col-5">
+              
+              <input
+                type="text"
+                placeholder="Enter a city...🔍"
+                class="enter-city"
+                id="your-city"
+              />
+            </div>
+            <div class="col-2">
+              <input type="submit" class="btn btn-dark" value="Search" />
+            </div>
+            <div class = "col-1">
+              <input type = "submit" class= "btn btn-dark" id="current-location" value = "🌎 Current"/>
+            </div>
+          </div>
+        </form>
+        <div class="weather">
+          <div class="row">
+            <div class="col-5">
+              <h1 id="output-your-city">Los Angeles</h1>
+            
+              
+            <h2 id="day-time">Friday, 16:51 
+    <h3>
+      <span id = "description">
+                Sunny
+                </span>
+                <br />
+                <span id= "humidity">
+                Humidity: 68%
+    </span>
+                <br />
+                <span id = "wind">
+                Wind: 15km/h
+                </span>
+              </h3>
+            </div>
+            <div class="col-5">
+              <br />  <br />  <br />  <br />
+              <img src="images/sun.png" alt="sun" width="100" />
+              <span class="today-temperature" id = "temperature-now">27°</span>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="Forecast row">
+          <div class="col">
+            MON
+            <br />
+            <img src="images/sun.png" alt="sun" width="70" />
+
+            27°C
+          </div>
+
+          <div class="col">
+            TUE
+            <br />
+            <img src="images/sun.png" alt="sun" width="70" />
+            <br />
+            24°C
+          </div>
+          <div class="col">
+            WED
+            <br />
+            <img src="images/sun.png" alt="sun" width="70" />
+            <br />
+            26°C
+          </div>
+          <div class="col">
+            THU
+             <br/>
+            <img src="images/sun.png" alt="sun" width="70" />
+           
+            <br/>
+            27°C
+          </div>
+          <div class="col">
+            FRI
+            <br />
+            <img src="images/sunrain.png" alt="sun" width="70" />
+            <br />
+            23°C
+          </div>
+        </div>
+        <br />
+        <footer>
+          This project was coded by <strong><a href="https://www.linkedin.com/in/jagoda-sadowska-5352bb9b" target="_blank">Jagoda Sadowska</strong></a>
+        </footer>
+      </div>
+    </div>
+    <script src= "src/app.js"></script>
+  </body>
+</html>

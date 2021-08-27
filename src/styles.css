@@ -1,0 +1,83 @@
+body {
+  background-image: url(../images/background9.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+}
+h1 {
+  font-family: "Roboto slab", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: medium;
+}
+footer {
+  text-align: center;
+  margin-top: 70px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(241, 235, 235);
+  border-radius: 10px;
+  background-color: rgb(228 222 188);
+  padding: 4px;
+  font-family: "Roboto slab", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+a {
+  color: #004ab7;
+  text-decoration: none;
+}
+.container {
+  font-family: "Hahmlet", serif;
+  max-width: 700px;
+}
+
+.enter-city,
+.btn {
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-bottom: 45px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+.enter-city {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.outer-box-frame {
+  border: 8px solid #383737;
+  margin: 4rem auto;
+  padding: 3rem;
+  background-image: linear-gradient(
+      100deg,
+      rgba(176, 220, 203, 0.4),
+      rgba(224, 226, 230, 0.4)
+    ),
+    url(../images/background3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.Forecast {
+  margin-top: 100px;
+  margin-bottom: 150px;
+  margin-right: 50px;
+  color: rgb(15, 16, 18);
+  font-weight: bold;
+}
+.today-temperature {
+  font-size: 35px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.col {
+  text-align: center;
+}
+.c-temp,
+.f-temp {
+  font-size: 25px;
+  position: relative;
+  top: -7px;
+}
