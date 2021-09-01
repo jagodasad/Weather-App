@@ -56,7 +56,11 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempNow = document.querySelector("#temperature-now");
   tempNow.innerHTML = `${temperature}°C`;
-
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   let location = document.querySelector("#output-your-city");
   location.innerHTML = `${response.data.name}`;
   let humidityNow = Math.round(response.data.main.humidity);
@@ -66,6 +70,7 @@ function showTemperature(response) {
   windNow.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}mph`;
   let descriptionNow = document.querySelector("#description");
   descriptionNow.innerHTML = response.data.weather[0].main;
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 navigator.geolocation.getCurrentPosition(handlePosition);
 
