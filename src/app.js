@@ -68,7 +68,6 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
 }
-navigator.geolocation.getCurrentPosition(handlePosition);
 
 function findLocation(event) {
   event.preventDefault();
