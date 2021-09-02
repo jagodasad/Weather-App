@@ -1,5 +1,3 @@
-//challenge 1
-
 function formatDate(date) {
   date = now.getDate();
   let days = [
@@ -27,7 +25,6 @@ let now = new Date();
 let dayTime = document.querySelector("#day-time");
 formatDate(now);
 
-//challenge 2
 function enterCity(event) {
   event.preventDefault();
   let yourCity = document.querySelector("#your-city");
@@ -40,8 +37,6 @@ function enterCity(event) {
 }
 let cityForm = document.querySelector("#enter-your-city");
 cityForm.addEventListener("submit", enterCity);
-
-//challenge 3
 
 function handlePosition(position) {
   let latitude = position.coords.latitude;
