@@ -81,3 +81,10 @@ a {
   position: relative;
   top: -7px;
 }
+.weather .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+.weather .active:hover {
+  text-decoration: none;
+}

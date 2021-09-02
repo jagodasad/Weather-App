@@ -55,7 +55,7 @@ function handlePosition(position) {
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempNow = document.querySelector("#temperature-now");
-  tempNow.innerHTML = `${temperature}°C`;
+  tempNow.innerHTML = `${temperature}`;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -67,10 +67,11 @@ function showTemperature(response) {
   let humidityHere = document.querySelector("#humidity");
   humidityHere.innerHTML = `Humidity: ${humidityNow}%`;
   let windNow = document.querySelector("#wind");
-  windNow.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}mph`;
+  windNow.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}km/h`;
   let descriptionNow = document.querySelector("#description");
   descriptionNow.innerHTML = response.data.weather[0].main;
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemperature = response.data.main.temp;
 }
 navigator.geolocation.getCurrentPosition(handlePosition);
 
@@ -81,3 +82,30 @@ function findLocation(event) {
 
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", findLocation);
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let tempNow = document.querySelector("#temperature-now");
+  tempNow.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  let tempNow = document.querySelector("#temperature-now");
+  tempNow.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+let celsiusTemperature = null;
+
+search("Los Angeles");
