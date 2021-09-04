@@ -60,21 +60,20 @@ a {
   background-size: cover;
   background-position: right;
 }
-.Forecast {
+.weather-forecast {
   margin-top: 100px;
   margin-bottom: 150px;
   margin-right: 50px;
   color: rgb(15, 16, 18);
   font-weight: bold;
+  text-align: center;
 }
 .today-temperature {
   font-size: 35px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.col {
-  text-align: center;
-}
+
 .c-temp,
 .f-temp {
   font-size: 25px;
@@ -87,4 +86,9 @@ a {
 }
 .weather .active:hover {
   text-decoration: none;
+}
+.weather-forecast-temp-max,
+.weather-forecast-temp-min {
+  font-size: 15px;
+  opacity: 0.7;
 }

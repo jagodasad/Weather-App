@@ -25,6 +25,31 @@ let now = new Date();
 let dayTime = document.querySelector("#day-time");
 formatDate(now);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+
+  let forecastHTML = `<div class = "row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+            <div class = "weather-forecast-date">
+            ${day} </div>
+            <br />
+            <img src="images/sun.png" alt="sun" width="70" />
+<span class = "weather-forecast-temp-max">27°</span>
+ <span class = "weather-forecast-temp-min">23°</span>            
+          </div>
+</div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function enterCity(event) {
   event.preventDefault();
   let yourCity = document.querySelector("#your-city");
@@ -107,3 +132,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 let celsiusTemperature = null;
 
 search("Los Angeles");
+displayForecast();
