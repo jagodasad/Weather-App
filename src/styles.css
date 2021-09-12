@@ -1,7 +1,8 @@
-body {
-  background-image: url(../images/background9.jpg);
-  background-repeat: repeat;
-  background-size: cover;
+#myVideo {
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 h1 {
   font-family: "Roboto slab", Helvetica, Arial, sans-serif;
@@ -55,15 +56,15 @@ a {
       rgba(176, 220, 203, 0.4),
       rgba(224, 226, 230, 0.4)
     ),
-    url(../images/background3.jpg);
+    url(../images/background6.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
 }
 .weather-forecast {
   margin-top: 100px;
-  margin-bottom: 150px;
-  margin-right: 50px;
+  margin-bottom: 90px;
+  margin-right: 20px;
   color: rgb(15, 16, 18);
   font-weight: bold;
   text-align: center;
